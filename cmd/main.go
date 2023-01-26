@@ -15,6 +15,10 @@ type Handler struct {
 }
 
 func (h *Handler) GetTerms(writer http.ResponseWriter, request *http.Request) {
+	writer.Header().Set("Access-Control-Allow-Origin", "*")
+	writer.Header().Set("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+	writer.Header().Set("Access-Control-Allow-Headers", "*")
+
 	ctx := request.Context()
 
 	storageCtx, cancel := context.WithTimeout(ctx, h.Config.RedisTimeout)
