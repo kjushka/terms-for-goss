@@ -14,9 +14,7 @@ import (
 )
 
 const (
-	initDataPath  string = "../init.json"
-	initDataPath2 string = "../../init.json"
-	initDataPath3 string = "init.json"
+	initDataPath string = "init.json"
 )
 
 type Redis struct {
@@ -80,16 +78,6 @@ func (r *Redis) SetTermsData(ctx context.Context, allTermsData *AllData) error {
 
 func InitStorageData(ctx context.Context, storage *Redis) error {
 	file, err := os.OpenFile(initDataPath, os.O_RDONLY, 0777)
-	if err != nil {
-		log.Println(errors.Wrap(err, "reading init file 1"))
-	}
-
-	file, err = os.OpenFile(initDataPath2, os.O_RDONLY, 0777)
-	if err != nil {
-		log.Println(errors.Wrap(err, "reading init file 2"))
-	}
-
-	file, err = os.OpenFile(initDataPath3, os.O_RDONLY, 0777)
 	if err != nil {
 		return errors.Wrap(err, "reading init file 3")
 	}

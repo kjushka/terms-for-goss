@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  min-width: 200px;
+  max-width: 400px;
+  padding: 16px 12px;
+
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 1px rgb(44 44 54 / 4%), 0 0 2px rgb(44 44 54 / 6%),
+    0 4px 8px rgb(44 44 54 / 4%);
+
+  &-term {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  &-meaning {
+    overflow: hidden;
+    display: -webkit-box;
+
+    width: 100%;
+
+    text-overflow: ellipsis;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  & p {
+    margin: 0;
+    padding: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.dot {
+  transform: translate(-50%, -50%) !important;
+  width: 10px !important;
+  height: 10px !important;
+  background: #13a0fe !important;
+
+  &_top {
+    top: 0 !important;
+    left: 50% !important;
+  }
+
+  &_bottom {
+    top: 100% !important;
+    left: 50% !important;
+  }
+}
