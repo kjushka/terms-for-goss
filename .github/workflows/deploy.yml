@@ -45,7 +45,6 @@ jobs:
         go: [ 1.19 ]
         os: [ macos-latest ]
     name: lint
-    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v4
