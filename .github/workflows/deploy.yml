@@ -20,7 +20,7 @@ jobs:
           dockerfile: Dockerfile
           push: false
 
-  golangci:
+  backend-lint:
     runs-on: ubuntu-latest
     strategy:
       matrix:
