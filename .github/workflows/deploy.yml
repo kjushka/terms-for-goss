@@ -81,7 +81,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            cd /var/www/vpasport/glossary
+            cd /var/www/apetrov/glossary
             git pull origin main
             git status
             docker-compose down -v 
