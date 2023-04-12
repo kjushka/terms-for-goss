@@ -3,9 +3,10 @@ package main
 import (
 	"context"
 	"encoding/json"
-	"github.com/pkg/errors"
 	"log"
 	"net/http"
+
+	"github.com/pkg/errors"
 	"terms-for-goss/internal"
 )
 
